@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'ap-southeast-2'
-        SSH_CIDR = ''103.49.54.125/32''
+        SSH_CIDR = '103.49.54.125/32'
     }
 
     stages {
