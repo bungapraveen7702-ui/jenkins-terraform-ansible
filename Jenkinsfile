@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_DEFAULT_REGION = 'ap-south-1'
-        SSH_CIDR = 'YOUR_PUBLIC_IP/32'
+        AWS_DEFAULT_REGION = 'ap-southeast-2'
+        SSH_CIDR = ''103.49.54.125/32''
     }
 
     stages {
