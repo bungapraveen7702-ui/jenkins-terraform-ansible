@@ -1,0 +1,25 @@
+---
+- name: Configure EC2 server
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Update package list
+      apt:
+        update_cache: yes
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Create web page
+      copy:
+        content: "Welcome! Nginx configured by Ansible and Jenkins."
+        dest: /var/www/html/index.html
